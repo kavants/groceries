@@ -19,8 +19,25 @@ function Grocery() {
     setTaskItems(itemsCopy)
   }
 
-
-
+  const maybe = () =>
+  Alert.alert(
+    "Clear All Tasks",
+    "Are you sure?",
+    [
+      {
+        text: "Yes",
+        onPress: () => completeTask(),
+        
+      },
+      {
+        text: "Cancel",
+        style:"cancel",
+      },
+    ],
+    {
+      cancelable: true,
+    }
+  );
   const clearAll = () =>
   Alert.alert(
     "Clear All Tasks",
@@ -60,8 +77,8 @@ function Grocery() {
           {
             taskItems.map((item, index) => {
               return (
-                <TouchableOpacity key={index}  onPress={() => completeTask(index)}>
-                  <Task text={item}/>
+                <TouchableOpacity key={index}  onPress={maybe}>
+                  <Task text={item}>tsdfsdf</Task> 
                 </TouchableOpacity>
               )
             })
