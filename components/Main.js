@@ -4,8 +4,10 @@ import Grocery from './Grocery';
 import { NavigationContainer } from '@react-navigation/native';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import Test from './Test';
+import Third from './Third';
 import { Header } from 'react-native/Libraries/NewAppScreen';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
+import { Calendar } from 'react-native-calendars';
 
 
 
@@ -25,6 +27,7 @@ import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
                  paddingBottom: 3
            }
     }}>
+    <Tab.Screen name="Calendar" component={Third} />
     <Tab.Screen name="Test" component={Test} />
     <Tab.Screen name="Grocery" component={Grocery} />
   </Tab.Navigator>

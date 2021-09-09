@@ -21,7 +21,7 @@ function Grocery() {
 
   const maybe = () =>
   Alert.alert(
-    "Clear All Tasks",
+    "Remove Task",
     "Are you sure?",
     [
       {
@@ -38,6 +38,25 @@ function Grocery() {
       cancelable: true,
     }
   );
+
+  const test = () =>
+  Alert.alert(
+    "Remove Task",
+    "Are you sure?",
+    [
+      {
+        text: "Yes",
+        onPress: () => completeTask(),
+        
+      },
+      {
+        text: "Cancel",
+        style:"cancel",
+      },
+    ],
+
+  );
+  
   const clearAll = () =>
   Alert.alert(
     "Clear All Tasks",

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { View, Text, StyleSheet, CheckBox } from 'react-native';
+import { View, Text, StyleSheet, CheckBox, TouchableOpacity } from 'react-native';
 import Grocery from './Grocery';
 
 
@@ -7,6 +7,7 @@ const Task = (props) => {
   const [isSelected, setSelection] = useState(false);
 
   return (
+
     <View style={styles.item}>
       <View style={styles.itemLeft}>
         <View style={styles.square}></View>
@@ -18,6 +19,7 @@ const Task = (props) => {
           style={styles.checkbox, styles.itemRight}
         />
     </View>
+  
   )
 }
 
