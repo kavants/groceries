@@ -35,7 +35,7 @@ const timeToString = (time) => {
           newItems[key] = items[key];
         });
         setItems(newItems);
-      }, 1000);
+      }, 100);
     };
   
     const renderItem = (item) => {
@@ -50,20 +50,21 @@ const timeToString = (time) => {
                   alignItems: 'center',
                 }}>
                 <Text>{item.name}</Text>
-                <Avatar.Text label="J" />
+                <Avatar.Text backgroundColor="blue" label="K" />
               </View>
             </Card.Content>
           </Card>
         </TouchableOpacity>
       );
     };
-  
+    let today = new Date().toISOString().slice(0, 10)
+
     return (
       <View style={{flex: 1}}>
         <Agenda
           items={items}
           loadItemsForMonth={loadItems}
-          selected={'2017-05-16'}
+          selected={today}
           renderItem={renderItem}
         />
       </View>
