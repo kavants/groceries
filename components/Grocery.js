@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import { KeyboardAvoidingView, StyleSheet, Text, View, TextInput, TouchableOpacity, Keyboard, ScrollView ,CheckBox, Alert, Button} from 'react-native';
+import { isRequired } from 'react-native/Libraries/DeprecatedPropTypes/DeprecatedColorPropType';
 import Task from './Task';
 
 function Grocery() {
@@ -9,7 +10,11 @@ function Grocery() {
 
   const handleAddTask = () => {
     Keyboard.dismiss();
+    if(task){
     setTaskItems([...taskItems, task])
+    } else{
+      alert("Please enter text");
+    }
     setTask(null);
   }
 
@@ -18,6 +23,8 @@ function Grocery() {
     itemsCopy.splice(index, 1);
     setTaskItems(itemsCopy)
   }
+
+
 
   const maybe = () =>
   Alert.alert(

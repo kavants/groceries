@@ -27,9 +27,9 @@ import { Calendar } from 'react-native-calendars';
                  paddingBottom: 3
            }
     }}>
+    <Tab.Screen name="todo List" component={Grocery} />
     <Tab.Screen name="Calendar" component={Third} />
-    <Tab.Screen name="Test" component={Test} />
-    <Tab.Screen name="Grocery" component={Grocery} />
+    <Tab.Screen name="Another Tab" component={Test} />
   </Tab.Navigator>
 </NavigationContainer>
       )

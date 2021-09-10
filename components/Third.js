@@ -2,7 +2,6 @@ import React, {useState} from 'react';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Header } from 'react-native/Libraries/NewAppScreen';
 import {Card, Avatar} from 'react-native-paper';
-
 import {Agenda} from 'react-native-calendars'
 
 
