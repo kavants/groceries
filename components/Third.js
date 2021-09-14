@@ -9,7 +9,8 @@ const timeToString = (time) => {
     const date = new Date(time);
     return date.toISOString().split('T')[0];
   };
-  
+let today = new Date().toISOString().slice(0, 10)
+
   const Third = () => {
     const [items, setItems] = useState({});
   
@@ -56,7 +57,6 @@ const timeToString = (time) => {
         </TouchableOpacity>
       );
     };
-    let today = new Date().toISOString().slice(0, 10)
 
     return (
       <View style={{flex: 1}}>

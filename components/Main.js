@@ -8,12 +8,36 @@ import Third from './Third';
 import { Header } from 'react-native/Libraries/NewAppScreen';
 import { View, Text, StyleSheet, TouchableOpacity } from 'react-native';
 import { Calendar } from 'react-native-calendars';
+import Login from './Login';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Container, Tab, Tabs, StyleProvider } from 'native-base';
 
 
 
-  const Tab = createMaterialTopTabNavigator();
 
-  function Main() {
+const Bottom = createBottomTabNavigator();
+
+function HomeTabs() {
+  return (
+    <Bottom.Navigator tabBarOptions={{
+       activeTintColor: '#fff',
+       inactiveTintColor: 'black',
+      //  activeBackgroundColor: 'orange',
+      //  inactiveBackgroundColor: '#b55031',
+           style: {
+                 backgroundColor: 'orange',
+                 paddingBottom: 3
+           }
+    }}>
+      <Bottom.Screen name="Account" component={Login} />
+    </Bottom.Navigator>
+  );
+}
+
+const Tab = createMaterialTopTabNavigator();
+
+
+function Main() {
       return(
   
   <NavigationContainer>
@@ -27,11 +51,15 @@ import { Calendar } from 'react-native-calendars';
                  paddingBottom: 3
            }
     }}>
+    <Tab.Screen name="Login" component={HomeTabs} />
+    <Tab.Screen name="Another Tab" component={Test} />
     <Tab.Screen name="todo List" component={Grocery} />
     <Tab.Screen name="Calendar" component={Third} />
-    <Tab.Screen name="Another Tab" component={Test} />
+
   </Tab.Navigator>
 </NavigationContainer>
+
+
       )
   }
 

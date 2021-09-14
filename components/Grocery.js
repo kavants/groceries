@@ -13,7 +13,14 @@ function Grocery() {
     if(task){
     setTaskItems([...taskItems, task])
     } else{
-      alert("Please enter text");
+      Alert.alert(
+      "Invalid Item", 
+      "Please enter text",
+      [
+        {
+          text:"Okay",
+        },
+      ]);
     }
     setTask(null);
   }
@@ -148,7 +155,8 @@ const styles = StyleSheet.create({
     marginTop: 30,
   },
   writeTaskWrapper: {
-    position: 'absolute',
+    // position: 'absolute',
+    paddingTop:50,
     bottom: 60,
     width: '100%',
     flexDirection: 'row',
@@ -171,7 +179,7 @@ const styles = StyleSheet.create({
     borderRadius: 60,
     justifyContent: 'center',
     alignItems: 'center',
-    borderColor: '#C0C0C0',
+    borderColor: 'orange',
     borderWidth: 1,
   },
   addText: {},
