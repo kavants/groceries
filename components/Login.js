@@ -238,7 +238,7 @@ function Login() {
   return (
     <Stack.Navigator>
       <Stack.Screen
-        name="Maybe"
+        name="Login"
         component={Maybe}
         options={{
           headerTintColor: 'white',

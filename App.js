@@ -3,7 +3,7 @@ import Main from './components/Main';
 import Header from './components/Header';
 import Login  from  './components/Login';
 import { NavigationContainer } from '@react-navigation/native';
-
+import Home from './components/Home';
 // import {
 //   SignIn,
 //   CreateAccount,
@@ -18,10 +18,10 @@ import { NavigationContainer } from '@react-navigation/native';
 export default function App() {
   return (
     <>
-    <Header/>
+    {/* <Header/> */}
     {/* <Main/> */}
-       <Main/>
-
+    <Home/>
+       {/* <Main/> */}
     </>
   );
 }

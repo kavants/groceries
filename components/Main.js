@@ -11,6 +11,7 @@ import { Calendar } from 'react-native-calendars';
 import Login from './Login';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements';
+// import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
 
 
 
@@ -35,12 +36,22 @@ import { Icon } from 'react-native-elements';
 // }
 
 const Tab = createMaterialTopTabNavigator();
+// const Drawer = createDrawerNavigator();
 
+
+function MyDrawer() {
+  return (
+    <Drawer.Navigator>
+      <Drawer.Screen name="Login" component={Login} />
+      {/* <Drawer.Screen name="Article" component={Article} /> */}
+    </Drawer.Navigator>
+  );
+}
 
 function Main() {
       return(
   
-  <NavigationContainer>
+  <NavigationContainer independent={true}>
   <Tab.Navigator tabBarOptions={{
        activeTintColor: '#fff',
        inactiveTintColor: 'black',
@@ -51,12 +62,13 @@ function Main() {
                  paddingBottom: 3
            }
     }}>
-    <Tab.Screen name="Login" component={Login} />
-    <Tab.Screen name="Another Tab" component={Test} />
+    {/* <Tab.Screen name="Login" component={Login} /> */}
     <Tab.Screen name="todo List" component={Grocery} />
     <Tab.Screen name="Calendar" component={Third} />
+    <Tab.Screen name="Another Tab" component={Test} />
 
   </Tab.Navigator>
+
 </NavigationContainer>
 
 
