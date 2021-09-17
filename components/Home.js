@@ -24,7 +24,7 @@ function MyDrawer() {
 
 function Home() {
     return (
-      <NavigationContainer >
+      <NavigationContainer independent={true}>
         <MyDrawer />
       </NavigationContainer>
     );

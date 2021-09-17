@@ -239,7 +239,7 @@ function Login() {
     <Stack.Navigator>
       <Stack.Screen
         name="Login"
-        component={Maybe}
+        component={Login}
         options={{
           headerTintColor: 'white',
           headerStyle: { backgroundColor: 'orange' },

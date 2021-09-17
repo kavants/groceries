@@ -11,6 +11,8 @@ import { Calendar } from 'react-native-calendars';
 import Login from './Login';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements';
+import Home from './Home';
+import OnboardingScreen from './Onboarding';
 // import { createDrawerNavigator, DrawerItems } from 'react-navigation-drawer';
 
 
@@ -65,7 +67,9 @@ function Main() {
     {/* <Tab.Screen name="Login" component={Login} /> */}
     <Tab.Screen name="todo List" component={Grocery} />
     <Tab.Screen name="Calendar" component={Third} />
-    <Tab.Screen name="Another Tab" component={Test} />
+    <Tab.Screen name="Home" component={Home} />
+    {/* <Tab.Screen name="Onboard" component={OnboardingScreen} /> */}
+    {/* <Tab.Screen name="Another Tab" component={Test} /> */}
 
   </Tab.Navigator>
 
