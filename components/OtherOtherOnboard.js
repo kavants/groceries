@@ -10,28 +10,34 @@ import {
   TouchableOpacity,
   Dimensions,
 } from 'react-native';
+import Login from './Login';
+import Home from './Home';
+import Main from './Main';
 
 const {width, height} = Dimensions.get('window');
 
+//const COLORS = {primary: '#282534', white: '#fff'};
+
 const COLORS = {primary: '#282534', white: '#fff'};
+
 
 const slides = [
   {
     id: '1',
     image: require('../assets/triangle.png'),
-    title: 'Best Digital Solution',
+    title: 'Create Your Tasks',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
     id: '2',
-    image: require('../assets/aea.jpg'),
-    title: 'Achieve Your Goals',
+    image: require('../assets/circle.png'),
+    title: 'Delete Your Tasks',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
   {
     id: '3',
     image: require('../assets/circle.png'),
-    title: 'Increase Your Value',
+    title: 'Repeat',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
   },
 ];
@@ -112,7 +118,8 @@ const OnboardingScreenH = ({navigation}) => {
             <View style={{height: 50}}>
               <TouchableOpacity
                 style={styles.btn}
-                onPress={() => navigation.replace('HomeScreen')}>
+                
+                onPress={() => navigation.navigate("Home")}>
                 <Text style={{fontWeight: 'bold', fontSize: 15}}>
                   GET STARTED
                 </Text>

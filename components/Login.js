@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Button, Text, Animated, StyleSheet, ScrollView } from 'react-native';
+import { View, Button, Text, Animated, StyleSheet, ScrollView, StatusBar} from 'react-native';
 import { Input, CheckBox } from 'react-native-elements';
 import * as SecureStore from 'expo-secure-store';
 import { navigation } from 'react-native-navigation';
@@ -7,6 +7,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import Main from './Main';
 import { NavigationContainer } from '@react-navigation/native';
 import { paddingLeft } from 'styled-system';
+import { SafeAreaView } from 'react-navigation';
 
 // const Stack = createStackNavigator();
 
@@ -56,8 +57,10 @@ class Maybe extends Component {
     }
 
     render() {
-        return (
+        return (                
             <View style={styles.container}>
+            <StatusBar backgroundColor={"orange"} />
+
                 <Input
                     placeholder='Username'
                     leftIcon={{type: 'font-awesome', name: 'user-o'}}
@@ -158,6 +161,7 @@ class Register extends Component {
 
     render() {
         return (
+
             <ScrollView>
                 <View style={styles.container}>
                     <Input
@@ -223,6 +227,7 @@ class Register extends Component {
                         />
                     </View>
                 </View>
+                
             </ScrollView>
         );
     }
@@ -239,7 +244,7 @@ function Login() {
     <Stack.Navigator>
       <Stack.Screen
         name="Login"
-        component={Login}
+        component={Maybe}
         options={{
           headerTintColor: 'white',
           headerStyle: { backgroundColor: 'orange' },
