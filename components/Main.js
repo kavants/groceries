@@ -9,7 +9,6 @@ import { Header } from 'react-native/Libraries/NewAppScreen';
 import { View, Text, StyleSheet, TouchableOpacity, StatusBar} from 'react-native';
 import { Calendar } from 'react-native-calendars';
 import Login from './Login';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Icon } from 'react-native-elements';
 import Home from './Home';
 import OnboardingScreen from './Onboarding';
@@ -47,8 +46,8 @@ function Main() {
     {/* <Tab.Screen name="Login" component={Login} /> */}
     <Tab.Screen name="todo List" component={Grocery} />
     <Tab.Screen name="Calendar" component={Third} />
-    <Tab.Screen name="Login" component={Login} />
-    {/* <Tab.Screen name="Another Tab" component={Test} /> */}
+    {/* <Tab.Screen name="Login" component={Login} /> */}
+    <Tab.Screen name="Another Tab" component={Test} />
 
   </Tab.Navigator>
 
